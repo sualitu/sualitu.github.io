@@ -1,0 +1,23 @@
+<html>
+  <head>
+     <script type="text/javascript">
+       function getQuerystring(){
+         var q=document.location.toString();
+         q=q.split("?");
+         q=q[1].split("&");
+         var str=""
+         for(i=0;i<q.length;i++){
+           tmp=q[i].split("=")
+           str+=i +". querystring name is '"+tmp[0]+"' value is '"+tmp[1]+"'<br />"
+                                          }
+         document.getElementById("results").innerHTML=str
+                      }
+    onload=function(){
+           getQuerystring()
+                     }
+     </script>
+  </head>
+  <body>
+    <div id="results"></div>
+  </body>
+</html>
